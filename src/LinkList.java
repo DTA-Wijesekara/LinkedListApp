@@ -58,4 +58,33 @@ public class LinkList
         System.out.println("that is not found");
         return null;
     }
+    public void delete(int key)
+    {
+        if (isEmpty())
+        {
+            System.out.println("list is empty nothing to delete");
+            return;
+        }
+        Node current = head;
+        Node previous = head;
+        int count=1;
+        while(current != null)
+        {
+            if(count == key)
+            {
+                if (count == 1)
+                {
+                    head = head.next;
+                    return;
+                }
+                previous.next = current.next;
+                return;
+            }
+            previous = current;
+            current = current.next;
+            count++;
+        }
+        System.out.println("that is not found");
+        return;
+    }
 }
