@@ -27,4 +27,19 @@ public class LinkList
         temp.next = null;
         return temp;
     }
+    public void displayList()
+    {
+        if (isEmpty())
+        {
+            System.out.println("list is empty nothing to display");
+            return;
+        }
+        Node current = head;
+        while(current != null)
+        {
+            current.displayNode();
+            current = current.next;
+        }
+        System.out.println();
+    }
 }
