@@ -35,6 +35,7 @@ public class LinkList
             return;
         }
         Node current = head;
+        System.out.println("the list is");
         while(current != null)
         {
             current.displayNode();
@@ -50,7 +51,9 @@ public class LinkList
         {
             if(count == key)
             {
-                return current;
+                Node x =current;
+                x.next = null;
+                return x;
             }
             current = current.next;
             count++;
