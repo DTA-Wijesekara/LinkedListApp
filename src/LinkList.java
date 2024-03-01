@@ -42,4 +42,20 @@ public class LinkList
         }
         System.out.println();
     }
+    public Node find (int key)
+    {
+        Node current = head;
+        int count=1;
+        while(current != null)
+        {
+            if(count == key)
+            {
+                return current;
+            }
+            current = current.next;
+            count++;
+        }
+        System.out.println("that is not found");
+        return null;
+    }
 }
