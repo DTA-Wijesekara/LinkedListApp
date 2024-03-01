@@ -9,6 +9,6 @@ public class Node
     }
     public void displayNode()
     {
-
+        System.out.println(this.data + " ");
     }
 }
