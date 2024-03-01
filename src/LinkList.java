@@ -15,4 +15,16 @@ public class LinkList
         newNo.next = head;
         head = newNo;
     }
+    public Node deleteFirst()
+    {
+        if (isEmpty())
+        {
+            System.out.println("list is empty nothing to delete");
+            return null;
+        }
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        return temp;
+    }
 }
